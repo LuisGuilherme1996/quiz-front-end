@@ -1,0 +1,29 @@
+        <div class="container-fluid  h-100 d-flex  justify-content-center align-items-center ">
+            <div class="row   rounded-5  border  border-1 border-secondary  h-75  w-75 shadow fundo-tela">
+                <div class="modal-botao-drop">
+                    <div class="dropdown">
+                        
+                        <button class="dropbtn">
+                            <span class="material-symbols-outlined">
+                                login
+                                </span>
+                        </button>
+                        <div class="dropdown-content">
+                            <a>Cadastrar Conta</a>
+                            <a data-bs-toggle="modal" data-bs-target="#loginModal" (click)="abrirModalLogin.emit()">Logar</a>
+                        </div>
+                      
+                    </div>
+                </div>
+                <div class="col-1 d-flex  flex-column   w-100 justify-content-center align-items-center">
+                <img src="../../../../assets/img/logoqueezypng.png" width="60%" alt="logo">
+                <div class="col-4">
+                    <button class="border border-1 border-black rounded-5 w-100   fs-1  cor-botao "
+                    (click)="abrirTabela.emit()"
+                    >
+                        COMEÇAR
+                    </button>
+                </div>
+                </div>
+            </div>
+        </div>

@@ -1,0 +1,88 @@
+<!-- <button nz-button nzType="primary">teste</button> -->
+
+<div class="row justify-content-center">
+    <div class="col-md-8 border shadow-lg ">
+        <div class="cabecalho gap-1">
+            <div class="col-md-4 ">
+                <span class="material-symbols-outlined icon-back"
+                (click)="voltarTela()"
+                >
+                    arrow_back
+                </span>
+            </div>
+            <div>
+                <h2>Tabela de Jogos</h2>
+            </div>
+        </div>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <span class="material-symbols-outlined">
+                                more_vert
+                                </span>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="#">Jogar</a>
+                        </div>
+                      </div>
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+<!-- <nz-table #basicTable [nzData]="games">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>url</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of basicTable.data">
+        <td>Luis</td>
+        <td>www.com</td>
+        <td>  <a nz-dropdown >
+            Hover me, Click menu item
+            <span nz-icon nzType="down"></span>
+          </a>
+          <nz-dropdown-menu #menu="nzDropdownMenu">
+            <ul nz-menu>
+              <li nz-menu-item (click)="log('1st menu item')">1st menu item</li>
+              <li nz-menu-item (click)="log('2nd menu item')">2nd menu item</li>
+              <li nz-menu-item (click)="log('3rd menu item')">3rd menu item</li>
+            </ul>
+          </nz-dropdown-menu></td>
+        <td>
+          <a>Action 一 {{data.name}}</a>
+          <nz-divider nzType="vertical"></nz-divider>
+          <a>Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table> -->
