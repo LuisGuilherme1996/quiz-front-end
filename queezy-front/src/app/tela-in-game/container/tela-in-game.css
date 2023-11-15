@@ -1,0 +1,147 @@
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.card-main{
+    background-color: rgb(255, 238, 238);
+    animation: fadeIn 2s;
+}
+.card-header{
+    border-bottom: 1px solid rgb(118, 118, 118)
+}
+.div-card{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.div-icon{
+    width: 10%;
+}
+.icon {
+    font-size: 45px;
+    cursor: pointer;
+}
+
+.div-titulo{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+.titulo{
+    font-size: 70px;
+    font-family: 'FontQueezy', sans-serif;
+    animation: fadeIn 10s;
+    word-spacing: 15px
+}
+
+.card-question{
+    margin-top: 4px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1px;
+}
+label{
+    font-size: 60px;
+    font-family: 'Roboto', sans-serif;
+}
+.span-numerico{
+    box-shadow: 0px 0px 10px -1px rgb(23, 21, 21);
+    border-radius: 50%;
+    width: fit-content;
+    background-color: #86378c;
+    padding: 10px;
+}
+
+.div-label-question{
+    width: 100%;
+}
+
+.div-input-question{
+    width: 100%;
+}
+textarea {
+    border: none;
+    resize: none;
+    border: none;
+    width: 100%;
+    margin-bottom: 2px;
+    padding: 6px;
+    font-size: 50px;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(255, 238, 238);
+    flex-wrap: wrap ;
+    color: rgb(255, 251, 251);
+    font-weight: 600;
+    text-shadow: 2px 2px 10px  rgba(4, 0, 0, 0.5);
+    padding-left: 50px;
+}
+
+.div-card-imagem{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.div-imagem{
+    width: 30%;
+    height: 70%;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.div-btn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    width: 30%;
+    height: 50%;
+    padding-bottom: 15px;
+    text-align: center;
+    font-size: 15px;
+    background-color: #86378c;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 4px;
+}
+
+.card-div-input-respostas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 5px;
+
+}
+
+.div-input{
+    width: 40%;
+    margin-bottom: 5px;
+}
+.input-resposta{
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #86378c;
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 0px 0px 10px  rgba(249, 247, 247, 0.5);
+
+}

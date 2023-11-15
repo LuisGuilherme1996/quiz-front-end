@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TelaGameModule } from './tela-game/tela-game.module';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { ModalModule } from './login/modal-login/modal.module';
+import { TelaInGameModule } from './tela-in-game/tela-in-game.module';
 
 
 // registerLocaleData(pt);
@@ -34,7 +35,8 @@ import { ModalModule } from './login/modal-login/modal.module';
     NgZorroModule,
     TelaGameModule,
     NzButtonModule,
-    ModalModule
+    ModalModule,
+    TelaInGameModule
     
   ],
   // providers: [

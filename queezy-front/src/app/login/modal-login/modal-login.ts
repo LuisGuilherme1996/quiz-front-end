@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
     selector: 'modal-login',
@@ -7,9 +8,15 @@ import { Component, OnInit } from "@angular/core";
 })
 
 export class ModalLoginComponent implements OnInit {
-    constructor() { }
+    constructor(
+        private router: Router,
+    ) { }
 
     ngOnInit(): void {
         
+    }
+
+    public mudarTela(){
+        this.router.navigate(['/home'])
     }
 }

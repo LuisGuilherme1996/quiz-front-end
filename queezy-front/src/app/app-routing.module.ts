@@ -9,6 +9,18 @@ const routes: Routes = [
   {
     path: 'home',
      loadChildren: () => import('./tela-inicio/tela-inicio.module').then(m => m.TelaInicioModule)
+  },
+  {
+    path: 'login',
+     loadChildren: () => import('./login/modal-login/modal.module').then(m => m.ModalModule)
+  },
+  {
+    path: 'cadastro',
+      loadChildren: () => import('./tela-cadastro/cadastro.module').then(m => m.TelaCadastroModule) 
+  },
+  {
+    path: 'in-game',
+      loadChildren: () => import('./tela-in-game/tela-in-game.module').then(m => m.TelaInGameModule)
   }
 ];
 

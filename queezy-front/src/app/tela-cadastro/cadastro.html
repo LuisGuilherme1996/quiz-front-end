@@ -1,0 +1,52 @@
+<div class="container bg-danger-subtle  ">
+    <div class="row justify-content-center">
+        <div class="col-md-4 ">
+            <span class="material-symbols-outlined icon-back"
+            (click)="voltarTela()"
+            >
+                arrow_back
+            </span>
+        </div>
+        <div class="col-md-4 register-container">
+            <h2 class="text-center">Cadastrar Conta</h2>
+            <form [formGroup]="cadastroForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nome</label>
+                    <input 
+                    type="text" 
+                    class="form-control" 
+                    id="name" 
+                    required
+                    formControlName="name" 
+
+                    >
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input 
+                    type="email" 
+                    class="form-control" 
+                    id="email" 
+                    required
+                    formControlName="email"
+                    >
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Senha</label>
+                    <input 
+                    type="password" 
+                    class="form-control" 
+                    id="password" 
+                    required
+                    formControlName="password"
+                    >
+                </div>
+                <button 
+                type="submit" 
+                class="btn btn-primary"
+                (click)="cadastrarConta()"
+                >Cadastrar</button>
+            </form>
+        </div>
+    </div>
+  </div>
