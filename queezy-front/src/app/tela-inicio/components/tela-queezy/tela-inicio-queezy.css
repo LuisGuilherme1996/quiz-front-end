@@ -69,13 +69,11 @@ li:hover{
     transition: 0.5s ease ;
 }
 
- /* Estilizando o container do dropdown */
  .dropdown {
     position: relative;
     display: inline-block;
   }
   
-  /* Estilizando o botão do dropdown */
   .dropbtn {
     background-color: #ff4d4f;
     color: white;
@@ -92,7 +90,6 @@ li:hover{
     justify-content: center;
   }
   
-  /* Estilizando o conteúdo do dropdown */
   .dropdown-content {
     display: none;
     position: absolute;
@@ -104,7 +101,6 @@ li:hover{
     right: 5px;
 }
 
-/* Estilizando os links dentro do dropdown */
 .dropdown-content a {
     color: white;
     font-weight: 600;
@@ -114,13 +110,11 @@ li:hover{
     border-radius: 10px;
   }
   
-  /* Mudando a cor do link quando passa o mouse sobre ele */
   .dropdown-content a:hover {
     background-color: #64549e;
     transition: 0.1s ease;
   }
   
-  /* Exibindo o dropdown quando o botão é hover */
   .dropdown:hover .dropdown-content {
     display: block;
   }

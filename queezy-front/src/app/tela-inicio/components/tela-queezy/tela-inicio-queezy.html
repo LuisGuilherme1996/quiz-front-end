@@ -9,8 +9,8 @@
                                 </span>
                         </button>
                         <div class="dropdown-content">
-                            <a>Cadastrar Conta</a>
-                            <a data-bs-toggle="modal" data-bs-target="#loginModal" (click)="abrirModalLogin.emit()">Logar</a>
+                            <a [routerLink]="'/cadastro'">Cadastrar Conta</a>
+                            <a [routerLink]="'/login'">Logar</a>
                         </div>
                       
                     </div>

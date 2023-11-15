@@ -23,8 +23,7 @@ const rotas: Routes = [
         FormsModule,
         ReactiveFormsModule,
         RouterModule.forChild(rotas),
-        NgZorroModule,
-        ModalModule
+        NgZorroModule
     ],
 
     exports: [TelaInicioComponent, TelaInicioQueezyComponent]
