@@ -13,21 +13,21 @@
               <thead>
                   <tr>
                       <th scope="col">Nome</th>
-                      <th scope="col">Email</th>
+                      <th scope="col">Url</th>
                       <th scope="col">Ações</th>
                   </tr>
               </thead>
               <tbody>
-                  <tr>
-                      <td>Nome Exemplo</td>
-                      <td>email@exemplo.com</td>
+                  <tr *ngFor="let item of games">
+                      <td>{{item.name}}</td>
+                      <td>{{item.url}}</td>
                       <td>
                           <div class="dropdown">
-                              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
                                   Ações
                               </button>
                               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                  <li><a class="dropdown-item" (click)="jogarGame()">Jogar</a></li>
+                                  <li><a class="dropdown-item" (click)="jogarQueezy(item)" >Jogar</a></li>
                               </ul>
                           </div>
                       </td>

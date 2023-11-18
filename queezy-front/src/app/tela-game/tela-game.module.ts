@@ -2,7 +2,7 @@ import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { ReactiveFormsModule } from "@angular/forms";
 import { Router, RouterModule, Routes } from "@angular/router";
-import { TelaGameComponent } from "./tela-game.component";
+import { TelaGameComponent } from "./container/tela-game.component";
 import { NgZorroModule } from "src/ngZorro/ng-zorro.module";
 // import { NzButtonModule } from "ng-zorro-antd/button";
 
