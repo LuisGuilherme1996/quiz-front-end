@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TelaInicioModule } from './tela-inicio/tela-inicio.module';
 import { Router, RouterModule } from '@angular/router';
-import { TelaGameComponent } from './tela-game/tela-game.component';
+import { TelaGameComponent } from './tela-game/container/tela-game.component';
 import { NgZorroModule } from 'src/ngZorro/ng-zorro.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';

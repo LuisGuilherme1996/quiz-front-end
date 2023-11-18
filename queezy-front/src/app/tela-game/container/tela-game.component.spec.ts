@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TelaGameComponent } from './tela-game.component';
+import { TelaGameComponent } from '../tela-game.component';
 
 describe('TelaGameComponent', () => {
   let component: TelaGameComponent;

@@ -1,11 +1,10 @@
 export class Games {
     constructor(
-        public key: string,
-        // public id_game: number,
+        public id_game: number,
         public name: string,
         public url: string,
-        // public user_id: number,
+        public user_id: number,
         public restarOnError: boolean,
-        // public age: number,
+        public games: any
     ){}
 }
