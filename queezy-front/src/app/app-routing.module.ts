@@ -17,6 +17,14 @@ const routes: Routes = [
   {
     path: 'cadastro',
       loadChildren: () => import('./tela-cadastro/cadastro.module').then(m => m.TelaCadastroModule) 
+  },
+  {
+    path: 'conta-usuario',
+      loadChildren: () => import('./tela-gerenciar-usuario/tela-gerenciar-usuario.module').then(m => m.TelaGerenciarUsuarioModule)
+  },
+  {
+    path: 'gerenciar-queezy',
+      loadChildren: () => import('./tela-gerenciar-queezy/tela-gerenciar-queezy.module').then(m => m.TelaGerenciarQueezyModule)
   }
 ];
 

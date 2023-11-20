@@ -1,0 +1,31 @@
+<div class="card-main">
+    <div class="container card-container">
+        <form [formGroup]="userForm" (submit)="salvarDadosUsuario()" class="h-100 w-75 form ">
+            <div class="titulo">
+                <h2>GERENCIAR CONTA</h2>
+            </div>
+            <div class="row card-form">
+                <div class="col-md-12 card-formulario">
+                        <label for="">Email*</label>
+                    <input type="text" class="input" formControlName="email">
+                </div>
+                <div class="col-md-12 card-formulario">
+                    <label for="">Nome*</label>
+                    <input type="text" class="input" formControlName="name">
+                </div>
+                <div class="col-md-12 card-formulario">
+                    <label for="">Senha*</label>
+                    <input type="password" class="input" formControlName="password">
+                </div>
+            </div>
+            <div class="botao-card-main">
+                <div class="botao-card">
+                    <button class="btn btn-success" [disabled]="userForm.invalid">Salvar</button>
+                </div>
+                <div class="botao-card">
+                    <button class="btn btn-danger" (click)="voltarTela()">Cancelar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

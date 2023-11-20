@@ -18,9 +18,10 @@ import { TelaInGameModule } from './tela-in-game/tela-in-game.module';
 import { RouteService } from './services/service.route';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { NotificacaoService } from './helpers/notificacao-service/notificacao.service';
+import { TelaGerenciarQueezyModule } from './tela-gerenciar-queezy/tela-gerenciar-queezy.module';
+import { TelaGerenciarUsuarioModule } from './tela-gerenciar-usuario/tela-gerenciar-usuario.module';
 
 
-// registerLocaleData(pt);
 
 @NgModule({
   declarations: [
@@ -40,7 +41,9 @@ import { NotificacaoService } from './helpers/notificacao-service/notificacao.se
     NzButtonModule,
     ModalModule,
     TelaInGameModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    TelaGerenciarQueezyModule,
+    TelaGerenciarUsuarioModule
     
   ],
   providers: [
@@ -48,9 +51,6 @@ import { NotificacaoService } from './helpers/notificacao-service/notificacao.se
     NotificacaoService
 
   ],
-  // providers: [
-  //   { provide: NZ_I18N, useValue: pt_BR }
-  // ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

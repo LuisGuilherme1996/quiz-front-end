@@ -8,9 +8,14 @@
                                 login
                                 </span>
                         </button>
-                        <div class="dropdown-content">
+                        <div *ngIf="!usuarioLogado" class="dropdown-content">
                             <a [routerLink]="'/cadastro'">Cadastrar Conta</a>
                             <a [routerLink]="'/login'">Logar</a>
+                        </div>
+                        <div *ngIf="usuarioLogado" class="dropdown-content">
+                            <a [routerLink]="'/gerenciar-queezy'">Gerenciar Queezy</a>
+                            <a [routerLink]="'/conta-usuario'">Gerenciar Conta</a>
+                            <a (click)="sairDaConta()">Sair</a>
                         </div>
                       
                     </div>

@@ -2,10 +2,19 @@
     0% {opacity: 0;}
     100% {opacity: 1;}
 }
-
+.main-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+    width: 100vw;
+    height: 100vh;
+}
 .card-main{
     background-color: rgb(255, 238, 238);
     animation: fadeIn 2s;
+    border-radius: 3px;
 }
 .card-header{
     border-bottom: 1px solid rgb(118, 118, 118)
@@ -19,10 +28,7 @@
 .div-icon{
     width: 10%;
 }
-.icon {
-    font-size: 45px;
-    cursor: pointer;
-}
+
 
 .div-titulo{
     width: 90%;
@@ -30,7 +36,7 @@
     justify-content: center;
 }
 .titulo{
-    font-size: 70px;
+    font-size: 40px;
     font-family: 'FontQueezy', sans-serif;
     animation: fadeIn 10s;
     word-spacing: 15px
@@ -45,8 +51,10 @@
     gap: 1px;
 }
 label{
-    font-size: 60px;
+    font-size: 15px;
     font-family: 'Roboto', sans-serif;
+    /* text-shadow: 0px 0px 2px black; */
+    text-align: start;
 }
 .span-numerico{
     box-shadow: 0px 0px 10px -1px rgb(23, 21, 21);
@@ -64,9 +72,9 @@ label{
     width: 100%;
 }
 textarea {
-    border: none;
+    /* border: none; */
     resize: none;
-    border: none;
+    /* border: none; */
     width: 100%;
     margin-bottom: 2px;
     padding: 6px;
@@ -102,7 +110,7 @@ img{
     align-items: center;
     justify-content: center;
 }
-button{
+/* button{
     width: 30%;
     height: 50%;
     padding-bottom: 15px;
@@ -114,7 +122,7 @@ button{
     letter-spacing: 1px;
     border: none;
     border-radius: 4px;
-}
+} */
 
 .card-div-input-respostas{
     display: flex;
@@ -134,9 +142,9 @@ button{
     outline: none;
     /* width: 100%; */
     width: 100%;
-    padding: 15px;
+    padding: 10px;
     border-radius: 5px;
-    background-color: #86378c;
+    background-color: #340234;
     font-size: 25px;
     color: white;
     font-weight: 600;
@@ -146,11 +154,15 @@ button{
     text-shadow: 0px 0px 10px  rgba(249, 247, 247, 0.5);
 
 }
-.input-resposta:hover{
+.input-resposta:focus::placeholder{
+    color: transparent;
+    text-shadow: none;
+}
+/* .input-resposta:hover{
     background: #12a925;
     color: white;
     font-weight: 900;
-}
+} */
 
 .answer-container {
     display: grid;
@@ -158,3 +170,114 @@ button{
     gap: 10px;
     margin-bottom: 5px;
   }
+
+  .card-main-pergunta{
+    width: 100%;
+    margin-bottom: 3px;
+  }
+
+  .card-pergunta{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-align: center;
+  }
+
+input{
+    width: 100%;
+    padding: 4px;
+    border: none;
+    box-shadow: 0px 0px 2px 3px rgb(227, 197, 231);
+    outline: none;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-bottom: 2px;
+    font-family: "ROBOTO";
+}
+.card-main-question-answer{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+.card-checkbox{
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 5px;
+
+}
+.checkbox{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0px 0px 1px 2px rgb(69, 162, 3);
+    cursor: pointer;
+}
+.checkbox:checked{
+    background-color: rgb(69, 162, 3);
+}
+.checkbox:checked::after{
+    font-family: "Material Icons";
+    content: \e876;
+    width: 24px;
+    height: 24px;
+}
+.label-resposta-correta{
+    font-size: 14px;
+    color: red;
+}
+.input-question:focus::placeholder{
+    color: transparent;
+    text-shadow: none;
+}
+
+.card-botao-main{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.card-botao{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+button{
+    width: 100%;
+}
+
+.input-question{
+    width: 100%;
+    box-shadow: 0px 0px 2px 1px rgb(182, 181, 181);
+    padding: 5px;
+}
+.card-icon{
+    width: fit-content;
+    box-shadow: 0px 0px 2px 1px rgb(182, 181, 181);
+    border-radius: 5px;
+    background: green;
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.icon{
+ font-size: 35px;
+ color: white;
+}
+.icon:hover{
+    background-color: rgb(17, 122, 17);
+}
+
+.icon-back{
+    font-size: 40px;
+    color: black;
+    cursor: pointer;
+}

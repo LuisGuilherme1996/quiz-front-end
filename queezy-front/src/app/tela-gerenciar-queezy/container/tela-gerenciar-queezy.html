@@ -1,0 +1,125 @@
+<!-- <form [formGroup]="queezyForm">
+  <div class="card-main-question-answer">
+    <div class="card-main-pergunta">
+      <div class="card-pergunta">
+        <label for="">CRIE SUA PERGUNTA</label>
+        <input type="text" formControlName="question" class="input-question" />
+      </div>
+    </div>
+    <div formArrayName="answers" class="answer-container">
+      <div
+        *ngFor="let answer of answers.controls; let i = index"
+        class="card-resposta"
+      >
+        <div [formGroupName]="i">
+          <label for="">Resposta {{ i + 1 }}</label>
+          <div class="card-checkbox">
+            <label class="label-resposta-correta"
+              >Informe a resposta correta</label
+            >
+            <input
+              type="checkbox"
+              formControlName="answers_correct"
+              class="checkbox"
+            />
+          </div>
+          <input type="text" formControlName="answer" class="input-question" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-botao-main">
+    <div class="card-icon">
+      <span
+        class="material-symbols-outlined icon"
+        (click)="adicionarResposta()"
+      >
+        add
+      </span>
+    </div>
+    <div class="card-botao">
+      <button class="btn btn-success" type="submit">Salvar</button>
+    </div>
+  </div>
+</form> -->
+
+<div class="main-card">
+  <div class="container shadow-lg card-main">
+    <div class="row card-header">
+      <div class="col-md-12 div-card">
+        <div class="div-icon">
+          <span class="material-symbols-outlined icon-back" (click)="voltarTela()"
+            >arrow_back</span
+          >
+        </div>
+        <div class="div-titulo">
+          <h1 class="justify-content-center titulo">GERENCIE SEU QUEEZY</h1>
+        </div>
+      </div>
+    </div>
+    <form [formGroup]="queezyForm">
+      <div class="tabela-game-name">
+        <div class="card-main-game">
+          <label for="">NOME DO SEU QUEZZY</label>
+          <input type="text" class="input-question" formControlName="name" />
+        </div>
+      </div>
+      <div class="card-main-question-answer">
+        <div class="card-main-pergunta">
+          <div class="card-pergunta">
+            <label for="">CRIE SUA PERGUNTA</label>
+            <input
+              type="text"
+              formControlName="question"
+              class="input-question"
+            />
+          </div>
+        </div>
+        <div formArrayName="answers" class="answer-container">
+          <div
+            *ngFor="let answer of answers.controls; let i = index"
+            class="card-resposta"
+          >
+            <div [formGroupName]="i">
+              <label for="">Resposta {{ i + 1 }}</label>
+              <div class="card-checkbox">
+                <label class="label-resposta-correta"
+                  >Informe a resposta correta</label
+                >
+                <input
+                  type="checkbox"
+                  formControlName="answers_correct"
+                  class="checkbox"
+                />
+              </div>
+              <input
+                type="text"
+                formControlName="answer"
+                class="input-question"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-botao-main">
+        <div class="card-icon">
+          <span
+            class="material-symbols-outlined icon"
+            (click)="adicionarResposta()"
+          >
+            add
+          </span>
+        </div>
+        <div class="card-botao">
+          <button
+            class="btn btn-success"
+            type="submit"
+            (click)="enviarQuestion()"
+          >
+            Salvar
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

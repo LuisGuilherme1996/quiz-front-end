@@ -37,6 +37,7 @@ export class TelaInGameComponent implements OnInit {
     public async listagemQuestionByUser(){
         const response = await this.facade.listarQuestions(this.user.user_id)
         this.game = response
+        console.log(this.game,'game')
     }
 
     public async  enviarResposta(resposta: any){

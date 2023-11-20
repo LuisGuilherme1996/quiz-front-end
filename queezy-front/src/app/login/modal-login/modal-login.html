@@ -24,20 +24,20 @@
             <div class="row justify-content-center card-login">
               <div class="col-md-4">
                   <h2 class="text-center">Login</h2>
-                  <form [formGroup]="loginForm">
+                  <form  (submit)="authenticaUser($event)"  [formGroup]="loginForm">
                       <div class="mb-3">
                           <label for="email" class="form-label">Email</label>
                           <input type="text" class="input-email" formControlName="email" id="email" required>
                       </div>
                       <div class="mb-3">
                           <label for="password-field" class="form-label">Senha</label>
-                          <input type="password" class="input-senha" formControlName="password" id="password-field" required>
-                          <span  *ngIf="!icon_visible" class="material-symbols-outlined eye-icon" (click)="togglePasswordVisibility()">
+                            <input type="password" class="input-senha" formControlName="password" id="password-field" required>
+                          <!-- <span  *ngIf="!icon_visible" class="material-symbols-outlined eye-icon" (click)="togglePasswordVisibility()">
                             visibility
                             </span>
                           <span *ngIf="icon_visible" class="material-symbols-outlined eye-icon" (click)="togglePasswordVisibility()">
                             visibility_off
-                            </span>
+                            </span> -->
                           <!-- <i class="fa fa-eye-icon" (click)="togglePasswordVisibility()"></i> -->
                       </div>
                       <div class="mb-3">
@@ -45,11 +45,11 @@
                       </div>
                       <div class="row">
                         <div class="col-md-6">
-                          <button type="submit" class="btn btn-danger w-100 " (click)="mudarTela()">Cancelar</button>
-
+                          <button type="submit" class="btn btn-success w-100">Entrar</button>
                         </div>
                         <div class="col-md-6">
-                          <button type="submit" class="btn btn-success w-100" (click)="authenticaUser()">Entrar</button>
+                          <button type="submit" class="btn btn-danger w-100 " (click)="mudarTela()">Cancelar</button>
+
                         </div>
                       </div>
                   </form>

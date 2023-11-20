@@ -4,6 +4,7 @@ import { LoginFacade } from "../login.facade";
 import { LoginModel } from "../model/login.model";
 import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators } from "@angular/forms";
 import { NotificacaoService } from "src/app/helpers/notificacao-service/notificacao.service";
+import { RouteService } from "src/app/services/service.route";
 
 @Component({
     selector: 'modal-login',
@@ -14,11 +15,13 @@ import { NotificacaoService } from "src/app/helpers/notificacao-service/notifica
 export class ModalLoginComponent implements OnInit {
     public icon_visible: boolean = false;
     public loginForm: FormGroup
+    public logado: boolean = false;
     constructor(
         private router: Router,
         private facade: LoginFacade,
         private fb: FormBuilder,
-        private notificacaoService: NotificacaoService
+        private notificacaoService: NotificacaoService,
+        private routeService: RouteService
     ) { }
 
     ngOnInit(): void {
@@ -47,10 +50,13 @@ export class ModalLoginComponent implements OnInit {
         }
     }
 
-    public async authenticaUser() {
+    public async authenticaUser(event: Event) {
+        event.preventDefault()
         const auth = await this.facade.login(this.loginForm.value)
         if(auth){
             this.notificacaoService.sucesso('Login efetuado com sucesso')
+            const usuario = localStorage.setItem('user', JSON.stringify(auth))
+            this.verificarUsuarioLogado(usuario)
             this.router.navigate(['/home'])
         }else{
             this.notificacaoService.erro(`Usuário ou senha inválidos!`)
@@ -58,10 +64,13 @@ export class ModalLoginComponent implements OnInit {
         console.log(auth, `auth`)
     }
 
-//     customAsyncValidator(control: AbstractControl): Promise<ValidationErrors | null> | Observable<ValidationErrors | null> {
-//         return this.userService.isEmailTaken(control.value).pipe(
-//           map(isTaken => (isTaken ? { emailTaken: true } : null)),
-//           catchError(() => null)
-//         );
-//       }
+    public verificarUsuarioLogado(usuario: any){
+        const user = JSON.parse(localStorage.getItem('user'))
+        console.log(user, `user`)
+        const usuarioLogado = !!user
+        console.log(usuarioLogado, `usuarioLogado`)
+        this.logado = usuarioLogado
+        this.routeService.setData(this.logado)
+    }
+
 }
