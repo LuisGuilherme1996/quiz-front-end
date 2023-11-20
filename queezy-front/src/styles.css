@@ -13,3 +13,15 @@
     font-weight: normal;
     font-style: normal;
 }
+
+.mat-snack-bar-container.success {
+    background-color: green;
+    color: white;
+    font-family: "ROBOTO";
+  }
+  
+  .mat-snack-bar-container.error {
+    background-color: red;
+    color: white;
+    font-family: "Roboto";
+  }

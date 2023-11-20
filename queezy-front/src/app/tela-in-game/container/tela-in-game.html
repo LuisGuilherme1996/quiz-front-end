@@ -1,47 +1,83 @@
 <div class="container shadow-lg card-main">
     <div class="row card-header">
-        <div class="col-md-12 div-card ">
-            <div class="div-icon">
-                <span class="material-symbols-outlined icon"
-                (click)="voltarTela()"
-                >arrow_back</span>
-            </div>
-            <div class="div-titulo">
-                <h1 class="justify-content-center titulo">Quezzy Luís</h1>
-            </div>
+      <div class="col-md-12 div-card">
+        <div class="div-icon">
+          <span class="material-symbols-outlined icon" (click)="voltarTela()">arrow_back</span>
         </div>
+        <div class="div-titulo">
+          <h1 class="justify-content-center titulo">Quezzy {{userName}}</h1>
+        </div>
+      </div>
     </div>
     <div class="row">
-        <div class="col-md-12 card-question">
-            <div class="div-label-question">
-                <label for=""><span class="span-numerico">1-</span></label>
-            </div>
-            <div class="div-input-question">
-
-                <textarea type="text" disabled >Quantas copa do mundo o Brasil tem?</textarea>
-            </div>
+      <div class="col-md-12 card-question">
+        <div class="div-label-question">
+          <label for=""><span class="span-numerico">{{currentQuestionIndex + 1}}-</span></label>
         </div>
-        <!-- <div class="div-card-imagem">
-            <div class="div-imagem">
-                <img src="" alt="inserir imagem">
+        <div *ngIf="game.length > 0" class="div-input-question">
+          <textarea type="text" disabled>{{game[currentQuestionIndex].question}}</textarea>
+          <div class="answer-container">
+            <div *ngFor="let resposta of game[currentQuestionIndex].answer_fk">
+              <input
+                class="input-resposta"
+                type="text"
+                value="{{resposta.answers}}"
+                readonly
+                (click)="enviarResposta(resposta)"
+              />
             </div>
-            <div class="div-btn">
-                <button type="button"><p>Inserir uma imagem</p></button>
-            </div>
-        </div> -->
-        <div class="row card-div-input-respostas">
-            <div class="div-input ">
-                <input class="input-resposta" type="text" value="2" readonly>
-            </div>
-            <div class="div-input">
-                <input class="input-resposta" type="text" value="3" readonly>
-            </div>
-            <div class="div-input">
-                <input class="input-resposta" type="text" value="5" readonly>
-            </div>
-            <div class="div-input">
-                <input class="input-resposta" type="text" value="8" readonly>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
+
+
+<!-- <div class="container shadow-lg card-main">
+  <div class="row card-header">
+    <div class="col-md-12 div-card">
+      <div class="div-icon">
+        <span class="material-symbols-outlined icon" (click)="voltarTela()"
+          >arrow_back</span
+        >
+      </div>
+      <div class="div-titulo">
+        <h1 class="justify-content-center titulo">Quezzy {{userName}}</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 card-question">
+      <div class="div-label-question">
+        <label for=""><span class="span-numerico">1-</span></label>
+      </div>
+      <div *ngFor="let item of game" class="div-input-question">
+        <div *ngIf="item.length > 0 ">
+          <textarea type="text" disabled>{{item.question}}</textarea>
+          <div class="answer-container">
+              <div *ngFor="let resposta of item.answer_fk">
+              <input
+                class="input-resposta"
+                type="text"
+                value="{{resposta.answers}}"
+                readonly
+                (click)="enviarResposta(resposta)"
+              />
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+                
+                          <!-- <div class="div-card-imagem">
+                                    <div class="div-imagem">
+                                        <img src="" alt="inserir imagem">
+                                    </div>
+                        </div>
+                        <div class="div-btn">
+                            <button type="button"><p>Inserir uma imagem</p></button>
+                        </div>
+                    </div> -->

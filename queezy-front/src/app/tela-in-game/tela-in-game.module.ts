@@ -18,7 +18,7 @@ const route: Routes = [
         FormsModule, 
         RouterModule.forChild(route)
     ],
-    exports: []
+    exports: [TelaInGameComponent]
 })
 
 export class TelaInGameModule {}

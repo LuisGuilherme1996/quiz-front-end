@@ -17,10 +17,6 @@ const routes: Routes = [
   {
     path: 'cadastro',
       loadChildren: () => import('./tela-cadastro/cadastro.module').then(m => m.TelaCadastroModule) 
-  },
-  {
-    path: 'in-game',
-      loadChildren: () => import('./tela-in-game/tela-in-game.module').then(m => m.TelaInGameModule)
   }
 ];
 

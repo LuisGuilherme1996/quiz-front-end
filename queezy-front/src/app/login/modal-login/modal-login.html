@@ -18,18 +18,27 @@
             <button class="btn btn-lg btn-success ">Logar</button>
           </div>
         </div> -->
-        <div class="container">
-          <div class="row justify-content-center">
+        <div class="main-card">
+
+          <div class="card-main">
+            <div class="row justify-content-center card-login">
               <div class="col-md-4">
                   <h2 class="text-center">Login</h2>
-                  <form>
+                  <form [formGroup]="loginForm">
                       <div class="mb-3">
-                          <label for="username" class="form-label">Username</label>
-                          <input type="text" class="form-control" id="username" required>
+                          <label for="email" class="form-label">Email</label>
+                          <input type="text" class="input-email" formControlName="email" id="email" required>
                       </div>
                       <div class="mb-3">
-                          <label for="password" class="form-label">Password</label>
-                          <input type="password" class="form-control" id="password" required>
+                          <label for="password-field" class="form-label">Senha</label>
+                          <input type="password" class="input-senha" formControlName="password" id="password-field" required>
+                          <span  *ngIf="!icon_visible" class="material-symbols-outlined eye-icon" (click)="togglePasswordVisibility()">
+                            visibility
+                            </span>
+                          <span *ngIf="icon_visible" class="material-symbols-outlined eye-icon" (click)="togglePasswordVisibility()">
+                            visibility_off
+                            </span>
+                          <!-- <i class="fa fa-eye-icon" (click)="togglePasswordVisibility()"></i> -->
                       </div>
                       <div class="mb-3">
                           <a href="#">Redefinir a senha</a>
@@ -40,10 +49,11 @@
 
                         </div>
                         <div class="col-md-6">
-                          <button type="submit" class="btn btn-success w-100  ">Entrar</button>
+                          <button type="submit" class="btn btn-success w-100" (click)="authenticaUser()">Entrar</button>
                         </div>
                       </div>
                   </form>
               </div>
           </div>
       </div>
+          </div>

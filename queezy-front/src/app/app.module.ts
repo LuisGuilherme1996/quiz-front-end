@@ -15,6 +15,9 @@ import { TelaGameModule } from './tela-game/tela-game.module';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { ModalModule } from './login/modal-login/modal.module';
 import { TelaInGameModule } from './tela-in-game/tela-in-game.module';
+import { RouteService } from './services/service.route';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { NotificacaoService } from './helpers/notificacao-service/notificacao.service';
 
 
 // registerLocaleData(pt);
@@ -36,8 +39,14 @@ import { TelaInGameModule } from './tela-in-game/tela-in-game.module';
     TelaGameModule,
     NzButtonModule,
     ModalModule,
-    TelaInGameModule
+    TelaInGameModule,
+    MatSnackBarModule
     
+  ],
+  providers: [
+    RouteService,
+    NotificacaoService
+
   ],
   // providers: [
   //   { provide: NZ_I18N, useValue: pt_BR }
