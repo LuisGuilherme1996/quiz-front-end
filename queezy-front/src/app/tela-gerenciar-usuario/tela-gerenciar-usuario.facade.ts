@@ -12,7 +12,6 @@ export class TelaGerenciarUsuarioFacade {
     ){}
 
     public atualizarUsuario(user: User) : Promise<UserResponse>{
-        console.log(user, 'facade')
         return new Promise((resolve, reject) => {
             this.api.updateUser(user).subscribe({
                 next: (response) => {

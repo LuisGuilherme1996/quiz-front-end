@@ -21,7 +21,6 @@ export class TelaInicioComponent implements OnInit {
   }
 
   public abrirTabela(){
-    console.log('clicou')
     this.router.navigate(['game'])
 }
   public abrirModalLogin(){

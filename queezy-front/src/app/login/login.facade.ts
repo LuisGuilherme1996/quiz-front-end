@@ -16,7 +16,6 @@ export class LoginFacade {
             this.api.auth(dados)
             .subscribe({
                 next: (response: LoginModel) => {
-                    console.log(response, `response`)
                     resolve(response.user)
                 },
                 error: (error: any) => {

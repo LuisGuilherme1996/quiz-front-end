@@ -13,7 +13,6 @@ export class TelaGameFacade {
         this.api.listarGames().subscribe({
             next: (response) => {
                 resolve(response.games);
-                console.log(response.games);
             },
             error: (err) => {
                 reject(err);

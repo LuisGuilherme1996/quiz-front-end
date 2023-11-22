@@ -29,7 +29,6 @@ export class TelaCadastroComponent implements OnInit {
     public cadastrarConta(){
       const logou  =  this.facade.cadastrarUsuario(this.cadastroForm.value)
       logou.then(res => {
-        console.log(res)
         if(res == true){
         this.router.navigate(['/login'])
 

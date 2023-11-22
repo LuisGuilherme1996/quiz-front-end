@@ -16,7 +16,6 @@ export class TelaInGameApi {
     }
 
     public respostaCorreta(answer: any){
-        console.log(answer.id_answer, answer.question_id)
         return this.http.get<TelaInGameResponse>(`http://localhost:4000/queezy/api/check-question/${answer.id_answer}/${answer.question_id}`)
     }
 }

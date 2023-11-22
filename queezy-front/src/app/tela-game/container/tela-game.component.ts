@@ -39,9 +39,7 @@ export class TelaGameComponent implements OnInit{
   }
   
   public jogarQueezy(dados: Games){
-    console.log(dados, `dados do queezy`)
     this.routeService.setData(dados)
     this.router.navigate(['in-game'])
-    console.log(dados, `dados do queezy`)
   }
 }

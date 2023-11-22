@@ -61,14 +61,11 @@ export class ModalLoginComponent implements OnInit {
         }else{
             this.notificacaoService.erro(`Usuário ou senha inválidos!`)
         }
-        console.log(auth, `auth`)
     }
 
     public verificarUsuarioLogado(usuario: any){
         const user = JSON.parse(localStorage.getItem('user'))
-        console.log(user, `user`)
         const usuarioLogado = !!user
-        console.log(usuarioLogado, `usuarioLogado`)
         this.logado = usuarioLogado
         this.routeService.setData(this.logado)
     }
