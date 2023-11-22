@@ -37,7 +37,6 @@ export class TelaInGameComponent implements OnInit {
     public async listagemQuestionByUser(){
         const response = await this.facade.listarQuestions(this.user.user_id)
         this.game = response
-        console.log(this.game,'game')
     }
 
     public async  enviarResposta(resposta: any){
@@ -45,9 +44,13 @@ export class TelaInGameComponent implements OnInit {
         if(respostaCorreta){
             this.currentQuestionIndex++
             if(this.currentQuestionIndex >= this.game.length){
+                this.routeService.setData({venceuOGame: true, name: this.userName})
+                this.router.navigate(['final-queezy'])
                 this.currentQuestionIndex = 0
             }
         }else{
+            this.routeService.setData({venceuOGame: false, name: this.userName})
+            this.router.navigate(['final-queezy'])
             this.currentQuestionIndex = 0
         }
     }

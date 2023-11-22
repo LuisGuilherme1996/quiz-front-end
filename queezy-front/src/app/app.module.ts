@@ -20,6 +20,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { NotificacaoService } from './helpers/notificacao-service/notificacao.service';
 import { TelaGerenciarQueezyModule } from './tela-gerenciar-queezy/tela-gerenciar-queezy.module';
 import { TelaGerenciarUsuarioModule } from './tela-gerenciar-usuario/tela-gerenciar-usuario.module';
+import { TelaGanhouPerdeuModule } from './tela-ganhou-perdeu/tela-ganhou-perdeu.module';
 
 
 
@@ -43,7 +44,8 @@ import { TelaGerenciarUsuarioModule } from './tela-gerenciar-usuario/tela-gerenc
     TelaInGameModule,
     MatSnackBarModule,
     TelaGerenciarQueezyModule,
-    TelaGerenciarUsuarioModule
+    TelaGerenciarUsuarioModule,
+    TelaGanhouPerdeuModule
     
   ],
   providers: [

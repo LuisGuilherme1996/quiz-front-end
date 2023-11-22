@@ -1,0 +1,11 @@
+<div *ngIf="venceuOGame" class="card-main">
+    <div (click)="voltarTela()" class="card">
+        <img src="../../../assets/img/queezyvenceu.jpg" alt="">
+    </div>
+</div>
+
+<div *ngIf="!venceuOGame" class="card-main">
+    <div (click)="voltarTela()" class="card">
+        <img src="../../../assets/img/queezyperdeu.jpg" alt="">
+    </div>
+</div>

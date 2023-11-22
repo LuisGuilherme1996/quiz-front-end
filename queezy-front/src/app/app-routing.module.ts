@@ -25,6 +25,10 @@ const routes: Routes = [
   {
     path: 'gerenciar-queezy',
       loadChildren: () => import('./tela-gerenciar-queezy/tela-gerenciar-queezy.module').then(m => m.TelaGerenciarQueezyModule)
+  },
+  {
+    path: 'final-queezy',
+      loadChildren: () => import('./tela-ganhou-perdeu/tela-ganhou-perdeu.module').then(m => m.TelaGanhouPerdeuModule)
   }
 ];
 
